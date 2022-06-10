@@ -1,2 +1,4 @@
-$timestamp = "_" + (Get-Date -Format "yyyyMMdd_HHmmss")
-streamlink.exe --output namin$timestamp.ts "https://www.twitch.tv/namin1004" best
+$name = "namin1004"
+streamlink.exe --output "$name-{time:%Y%m%d%H%M%S}.ts" "https://www.twitch.tv/$name" best
+
+
